@@ -39,6 +39,7 @@ class Order: ObservableObject, Codable {
             return false
         }
         
+        // Challenge 1
         if name.isWhitespace || streetAddress.isWhitespace ||
             city.isWhitespace || zip.isWhitespace {
             return false
