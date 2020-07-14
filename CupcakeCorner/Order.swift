@@ -38,6 +38,12 @@ class Order: ObservableObject, Codable {
             city.isEmpty || zip.isEmpty {
             return false
         }
+        
+        if name.isWhitespace || streetAddress.isWhitespace ||
+            city.isWhitespace || zip.isWhitespace {
+            return false
+        }
+        
         return true
     }
     
